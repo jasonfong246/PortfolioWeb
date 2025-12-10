@@ -1,0 +1,330 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f0f2f5;
+    color: #333;
+     padding-top: 120px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* keeps it on top of everything */
+    background: #000000;
+    color: rgb(243, 239, 239);
+    text-align: center;
+    padding: 20px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: 10px; /* space above the line */
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 80px;              /* length of the line */
+    height: 4px;              /* thickness of the line */
+    background: black;        /* stripe color */
+    margin: 10px auto 0;      /* centers the line */
+    border-radius: 5px;       /* smooth edges */
+}
+
+.slide-section {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.slide-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Styling the nav bar container */
+nav {
+    position: fixed;
+    top: 70px; /* adjust based on header height */
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: #333; /* Dark background */
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Styling the individual links */
+nav a {
+    text-decoration: none;
+    color: white; /* Light text color */
+    padding: 8px 15px; /* Spacing inside the "button" */
+    margin: 0 10px; /* Space between buttons */
+    border-radius: 25px; /* Creates the pill shape */
+    transition: background-color 0.3s ease; /* Smooth color change */
+    display: inline-block; /* Allows padding and dimensions */
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #555; /* Slightly lighter on hover */
+    /* You could also try: background-color: #FF6B6B; for a pop of color */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section { 
+     scroll-margin-top: 140px;
+    margin-bottom: 60px; 
+}
+.about-container {
+    display: flex;
+    gap: 25px;
+    align-items: stretch;   /* Makes both sides the same height */
+    padding: 20px;
+}
+
+.about-img-wrapper {
+    flex: 0 0 auto;          /* Controls how wide the image section is */
+    display: flex;
+}
+
+.about-img {
+    width: 25%;
+    height: 25%;
+    object-fit: cover;      /* Fills the area without stretching */
+    border-radius: 12px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+#about-text .paragraph {
+    display: block;      /* acts like a paragraph */
+    margin-bottom: 20px; /* space between them */
+    line-height: 1.6;    /* better readability */
+}
+
+#about-carousel img {
+    width: 100%;         /* fills the container width */
+    height: 400px;       /* or whatever fixed height you want */
+    object-fit: contain;  /* scale to fit inside without cropping */
+    border-radius: 8px;
+    background-color: #f0f0f0; /* optional, for empty space */
+}
+
+.typewriter p {
+    opacity: 0;
+    font-size: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-card h3, .project-card p {
+    padding: 10px 15px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+button:hover { background: #357ab8; }
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+
+    /* Add these */
+    overflow-y: auto;        /* allow vertical scrolling if content is taller than screen */
+    -webkit-overflow-scrolling: touch; /* smooth scroll on mobile */
+    padding: 60px 20px;      /* space at top and sides for content */
+}
+
+.modal-content {
+    background: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+
+    /* Make sure it doesn't exceed viewport */
+    max-height: calc(100vh - 80px);  /* subtract padding */
+    overflow-y: auto;                /* scroll inside modal if content is too tall */
+    box-sizing: border-box;
+}
+
+.modal-img {
+    max-width: 70%;       /* makes image smaller */
+    max-height: 300px;    /* prevents tall GIFs from being huge */
+    display: block;
+    margin: 0 auto 15px;  /* centers it */
+    border-radius: 8px;
+}
+
+.close {
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
+.close:hover { color: red; }
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;           /* allow cards to wrap on smaller screens */
+    justify-content: center;   /* center the cards horizontally */
+    gap: 25px;                 /* space between each card */
+}
+
+.experience-card {
+    display: flex;                /* enable flex layout */
+    align-items: flex-start;      /* align image and content at top */
+    gap: 25px;                    /* space between image and text */
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+}
+
+.exp-img {
+    width: 120px;        /* fixed width */
+    height: 120px;       /* fixed height */
+    object-fit: contain;   /* crop if necessary, no stretching */
+    border-radius: 8px;
+    flex-shrink: 0;      /* prevent shrinking in flex layout */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;   /* adjust size */
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.carousel-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.modal-carousel .prev {
+    left: 10px;
+}
+
+.modal-carousel .next {
+    right: 10px;
+}
+
+.contact-links {
+    margin: 15px 0;
+}
+
+.linkedin-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 10px 16px;
+    background: #0077b5;
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+    font-weight: 500;
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.20);
+}
+
+.linkedin-icon {
+    width: 28px;
+    height: 28px;
+}

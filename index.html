@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Fong | Personal Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jason Fong</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="about" class="slide-section">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <img src="images/Myself.jpg" alt="Graduation Photo" class="about-img">
+                <div id="about-text">
+                    <p>
+                        Hello there! My name is Jason Shen Yik Fong, and I’m from Kuala Lumpur, Malaysia. I began my
+                        studies at Sunway University(Malaysia) from 2018 to 2020, majoring in Computer Science for the
+                        American Degree Transfer Program, and I was excited to continue my education in the U.S.
+                        However, when COVID hit in 2020, I started my first online classes at Ohio State University
+                        (OSU) in Autumn 2020. Once travel became possible, I flew to OSU in Autumn 2021, where I studied
+                        for three years while working as a part-time Student Assistant and eventually becoming a Student
+                        Manager before graduation. During this time, I also built lasting friendships that became like
+                        family, supporting me throughout my studies and beyond.
+                    </p>
+                    <!-- Image Carousel -->
+                    <div id="about-carousel" class="modal-carousel" data-images="
+                images/About1.jpg,
+                images/About2.jpg,
+                images/About3.jpg,
+                images/About4.png,
+                images/About5.jpeg,
+                images/About6.jpeg,
+                images/About7.jpeg
+            ">
+                        <img class="carousel-img">
+                        <button class="prev">&lt;</button>
+                        <button class="next">&gt;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="experience-section slide-section">
+            <h2>Experience</h2>
+            <div class="experience-container">
+
+                <!-- Fuyao -->
+                <div class="experience-card" data-modal="modal-fuyao">
+                    <img src="images/Fuyao.jpg" alt="Fuyao Glass America" class="exp-img">
+                    <div>
+                        <h3>Technical Supervisor</h3>
+                        <p>Fuyao Glass America</p>
+                        <p>December 2024 to December 2025</p>
+                        <p>Skills: Team Leadership, KUKA Robots, Process Optimization, Siemens Control Panels,
+                            Automation Technical Knowledge, KPI, Chinese Speaking/Translation</p>
+                    </div>
+                </div>
+
+                <!-- Outlier AI -->
+                <div class="experience-card" data-modal="modal-outlier">
+                    <img src="images/OutlierAI.webp" alt="Outlier AI" class="exp-img">
+                    <div>
+                        <h3>Advance Coder – AI Training (Freelancer)</h3>
+                        <p>Outlier AI</p>
+                        <p>October 2024 to January 2025</p>
+                        <p>Skills: Debugging, Java, Python, HTML, JS, C#, AI optimization, Quality Testing, Refine AI
+                            Models, AI Evaluation</p>
+                    </div>
+                </div>
+
+                <!-- OSU -->
+                <div class="experience-card" data-modal="modal-osu">
+                    <img src="images/OSU.webp" alt="Ohio State University" class="exp-img">
+                    <div>
+                        <h3>Student Manager</h3>
+                        <p>Ohio State University</p>
+                        <p> Sep 2021 to May 2024</p>
+                        <p>Skills: Team Management, Operations, Customer Service, Leadership, Health and Safety,
+                            Communication, Team Planning, Public Speaking</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section id="projects" class="slide-section">
+            <h2>Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card" data-modal="modal-game-dev">
+                    <img src="images/game-dev.gif">
+                    <h3>Maplestory Game Development</h3>
+                    <p>Skills: Java, Wizet, MySQL, SQL</p>
+                </div>
+
+                <div class="project-card" data-modal="modal-endlessRunner">
+                    <img src="images/EndlessRunner.gif">
+                    <h3>Endless Runner</h3>
+                    <p>Skills: C#, Unity, Game Development</p>
+                </div>
+
+                <div class="project-card" data-modal="modal-eatTogether">
+                    <img src="images/EatTogetherApp.gif">
+                    <h3>Eat Together Application</h3>
+                    <p>Skills: Java, Android Studio</p>
+                </div>
+
+                <div class="project-card" data-modal="modal-prey">
+                    <img src="images/PreyAndPredator.gif">
+                    <h3>Prey & Predator Simulation</h3>
+                    <p>Skills: Unity, C#, AI</p>
+                </div>
+
+                <div class="project-card" data-modal="modal-set">
+                    <img src="images/GameOfSet.gif">
+                    <h3>Game of Set</h3>
+                    <p>Skills: HTML, CSS, JavaScript, Web Development</p>
+                </div>
+
+                <div class="project-card" data-modal="modal-maze">
+                    <img src="images/RandomMazeGame.gif">
+                    <h3>Maze Game</h3>
+                    <p>Skills: C#, Unity, Kruskal's Algorithm</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="slide-section">
+            <h2>Contact</h2>
+
+            <!-- LinkedIn Button with Icon -->
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/jason-fong-7295a71a3/" target="_blank" class="linkedin-btn">
+
+                    <img src="images/linkedin.jpg" alt="LinkedIn" class="linkedin-icon">
+                    <span>Connect with me on LinkedIn</span>
+                </a>
+            </div>
+
+            <p>Email: jasonfong8143@gmail.com </p>
+            <p>Phone Number: (1) 614 - 966 4122</p>
+
+        </section>
+
+    </div>
+
+
+
+    <!-- MODALS -->
+    <!-- Fuyao Modal -->
+    <div id="modal-fuyao" class="modal" data-images="
+    images/Fuyao1.jpeg,
+    images/Fuyao2.jpeg,
+    images/Fuyao3.gif,
+    images/Fuyao4.jpeg
+">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Technical Supervisor – Fuyao Glass America</h2>
+            <ul>
+                <li>Led shift operations, overseeing daily team coordination, delegating tasks efficiently, and
+                    resolving technical or operational issues to ensure smooth production flow.</li>
+                <li>Maintained a production yield rate of over 98% by actively monitoring processes, identifying
+                    bottlenecks, and troubleshooting machinery and technical issues to prevent downtime.</li>
+                <li>Served as a liaison between Chinese-speaking technical teams and English-speaking management,
+                    facilitating clear communication, accurate reporting, and smooth collaboration across departments.
+                </li>
+                <li>Operated and maintained automated lamination glass machinery, including KUKA robots and Siemens
+                    control panels, and trained new operators on proper operation, safety protocols, and troubleshooting
+                    techniques to ensure consistent production quality.</li>
+            </ul>
+
+            <!-- Carousel goes HERE -->
+            <div class="modal-carousel">
+                <img class="carousel-img">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Outlier AI Modal -->
+    <div id="modal-outlier" class="modal" data-images="
+    images/OutlierAI1.png,
+    images/OutlierAI2.png
+">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Advance Coder – AI Training – Outlier AI</h2>
+            <ul>
+                <li>Enhanced AI model accuracy and reliability by reviewing, debugging, and validating code samples
+                    across multiple languages, including Java, Python, HTML, JavaScript, and C#.</li>
+                <li>Designed sophisticated test prompts and executed end-to-end evaluation tasks within strict 60-minute
+                    timeframes to measure model reasoning, code correctness, and output consistency.</li>
+                <li>Ensured alignment with user expectations by evaluating whether the AI followed instructions, matched
+                    coding standards, and provided accurate domain-specific support.</li>
+                <li>Analyzed AI-generated responses to identify logical errors, hallucinations, formatting issues, and
+                    gaps in understanding, then provided structured feedback for model improvement.</li>
+                <li>Improved the AI’s problem-solving competency through repetitive scenario testing, edge-case
+                    creation, and stress-testing logic-heavy prompts.</li>
+            </ul>
+
+            <div class="modal-carousel">
+                <img class="carousel-img">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- OSU Modal -->
+    <div id="modal-osu" class="modal" data-images="
+    images/OSU1.png,
+    images/OSU2.jpeg
+">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Student Manager – Ohio State University</h2>
+            <ul>
+                <li>Supervised daily operations of a high-volume dining facility serving over 4,500 guests per day,
+                    ensuring consistent service quality, food safety, and workflow efficiency.</li>
+                <li>Led, trained, and mentored a diverse team of 300+ employees, supporting onboarding, skill
+                    development, shift coordination, and performance improvement.</li>
+                <li>Resolved operational, personnel, and customer-related issues in real time, collaborating with
+                    management to implement service strategies and maintain a positive dining experience.</li>
+                <li>Optimized shift productivity by organizing task assignments, monitoring service stations, and
+                    ensuring staff coverage during peak hours.</li>
+                <li>Supported management initiatives by assisting with scheduling, inventory tasks, and enforcing
+                    organizational policies and safety standards.</li>
+            </ul>
+
+            <div class="modal-carousel">
+                <img class="carousel-img">
+                <button class="prev">&lt;</button>
+                <button class="next">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="modal-endlessRunner" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Endless Runner</h2>
+            <img src="images/EndlessRunner.gif" class="modal-img">
+            <p>This Endless Runner game, inspired by Subway Surfers and Temple Run, was developed by a two-person team using Unity, C# scripting, and the Unity Input System for precise player movement control. The player automatically advances through an endless environment while avoiding obstacles that spawn in randomized lanes (left, middle, or right) to ensure fast-paced and unpredictable gameplay.
+
+The game includes a dynamic difficulty system where the player’s running speed gradually increases over time, creating a more challenging experience as the run progresses. To maintain performance, objects that the player has passed are efficiently removed from the scene, preventing unnecessary memory buildup and ensuring smooth gameplay.
+This project showcases our understanding of Unity’s component-based architecture, object pooling, event-driven movement controls, and real-time procedural obstacle generation.</p>
+        </div>
+    </div>
+
+    <div id="modal-eatTogether" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Eat Together Application</h2>
+            <img src="images/EatTogetherApp.gif" class="modal-img">
+            <p>Eat Together is an Android application developed using Android Studio and tested via its built-in emulator. The app is designed specifically for students looking to meet friends and socialize on campus.
+
+Users can create, read, update, and delete (CRUD) plans for campus activities or meals, with all data, including user accounts and plans, stored securely in Firebase. The app allows users to see who is interested in the plans they create and update their own participation status at any time, fostering real-time collaboration and social interaction.
+
+This project demonstrates practical experience with mobile app development, Firebase integration, and user-centric interface design, as well as building systems that manage dynamic user data efficiently..</p>
+        </div>
+    </div>
+
+    <div id="modal-prey" class="modal" data-images="
+    images/PNPB.png,
+    images/PNPR.png
+">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Prey & Predator Simulation</h2>
+        <p>This project simulates the dynamic interaction between prey (blue) and predators (red), each with their
+            own movement patterns and vision logic, similar to how real animals like birds and cats perceive their
+            environment. The prey attempts to navigate the map while avoiding obstacles, including a moving pillar
+            that blocks escape paths.</p>
+
+        <p>Predators roam freely until they collide with a wall, at which point they change direction. When a prey
+            enters a predator’s field of vision, the predator will actively chase it until it moves out of sight.
+            The behavior is controlled through custom C# scripts in Unity, implementing AI states, detection ranges,
+            and real-time decision-making.</p>
+
+             <div class="modal-carousel">
+            <img class="carousel-img">
+            <button class="prev">&lt;</button>
+            <button class="next">&gt;</button>
+        </div>
+
+    </div>
+</div>
+
+    <div id="modal-game-dev" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Maplestory Game Development</h2>
+            <img src="images/game-dev.gif" class="modal-img">
+            <p>I am currently developing a custom MapleStory private server as a personal game development project.
+                Using Java and Wizet tools, I modify gameplay mechanics, create custom features, balance in-game
+                systems, and improve the overall player experience. This project allows me to explore server-side
+                programming, database integration, and game design while building a fully functional, customized
+                MapleStory environment.</p>
+        </div>
+    </div>
+
+    <div id="modal-set" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Game of Set</h2>
+            <img src="images/GameOfSet.gif" class="modal-img">
+            <p>The Game of Set is a fast-paced pattern-matching card game where each card contains a unique combination of four attributes; number, shape, color, and shading. A “Set” is formed when, for every attribute, the three selected cards are either all the same or all different.
+I built the full game using HTML, CSS, and JavaScript, including card rendering, board layout, and interactive UI elements for card selection. The JavaScript logic handles real-time pattern validation, checking whether the chosen cards satisfy Set rules using attribute comparison functions. The project also includes automatic Set generation, deck shuffling, and a dynamic UI that highlights matches, handles invalid selections, and updates the board seamlessly. The result is a complete, functioning browser version of the classic Set game with clean design, responsive interactions, and accurate rule enforcement.</p>
+        </div>
+    </div>
+
+    <div id="modal-maze" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Maze Game</h2>
+            <img src="images/RandomMazeGame.gif" class="modal-img">
+            <p>The Maze Generator is an interactive Unity game that creates randomized mazes each time it runs, providing a fresh challenge for players with every playthrough. Players navigate the maze to collect coins and earn points, adding an extra layer of engagement and replayability.
+
+The maze generation algorithm uses Kruskal’s algorithm to build the structure and generate dead-ends, ensuring a unique layout every time. The project also includes visualization of the maze generation process, giving players a dynamic view of the maze as it is created.
+
+Developed with Unity and scripted in C#, this project highlights skills in algorithm implementation, procedural content generation, game mechanics, and real-time visualization, while delivering an interactive and engaging gameplay experience.</p>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
